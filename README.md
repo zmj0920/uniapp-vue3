@@ -13,7 +13,6 @@
 - 代码规范：
   - [ESLint](https://eslint.org/)
   - [Prettier](https://prettier.io/)
-  - [Stylelint](https://stylelint.io/)
 - 提交规范：
   - [husky](https://typicode.github.io/husky/#/)
   - [lint-staged](https://www.npmjs.com/package/lint-staged)
@@ -87,7 +86,6 @@ storeToRefs 增强插件[pinia-auto-refs](https://github.com/Allen-1998/pinia-au
 ├── .lintstagedrc.json lint-staged配置
 ├── .npmrc npm配置
 ├── .prettierignore prettier忽略配置
-├── .stylelintrc.js stylelint配置
 ├── commitlint.config.js commitlint配置
 ├── FAQ.md
 ├── index.html 项目入口

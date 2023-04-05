@@ -1,10 +1,41 @@
 {
-	"pages": [{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
+	"pages": [
+		{
 			"name": "index",
 			"path": "pages/index/index",
+			"aliasPath": "/",
 			"style": {
 				"navigationBarTitleText": "首页",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			},
+			"meta": {
+				"auth": false,
+				"sync": true,
+				"title": "首页",
+				"group": "商城"
+			},
+			"app-plus": {
+				"titleNView": false,
+				"pullToRefresh": {
+					"support": true,
+					"color": "#fa436a",
+					"style": "default"
+				}
+			}
+		},
+		// 商品搜索
+		{
+			"path": "pages/index/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
 			}
 		},
 		{
@@ -15,29 +46,36 @@
 			}
 		}
 	],
-	"subPackages": [{
-		"root": "pages/test",
-		"pages": [{
-			"name": "test",
-			"path": "test",
-			"style": {
-				"navigationBarTitleText": "测试"
-			}
-		}]
-	}],
+	"subPackages": [
+		{
+			"root": "pages/test",
+			"pages": [
+				{
+					"name": "test",
+					"path": "test",
+					"style": {
+						"navigationBarTitleText": "测试"
+					}
+				}
+			]
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#1AA86C",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "RF微商城",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#f8f8f8"
 	},
 	"tabBar": {
-		"color": "#1AA86C",
-		"selectedColor": "#1AA86C",
-		"borderStyle": "white",
+		"color": "#C0C4CC",
+		"selectedColor": "#fa436a",
+		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/index/index",
+				"iconPath": "static/tab-home.png",
+				"selectedIconPath": "static/tab-home-current.png",
 				"text": "首页"
 			},
 			{
